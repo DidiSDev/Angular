@@ -1,0 +1,10 @@
+<!-- 1. Mostrar lo que se recoge de una caja de texto con un método específico para ello.-->
+ 
+<!-- HARÉ DOS FORMAS DE MOSTRARLO, CON UN ALERT Y EN UN H1  -->
+<label for="texto">Escriba una palabra o frase para mostarlo después</label>
+<input type="text" placeholder="Escriba en esta cajita" [(ngModel)]="textoEscrito">
+<br>
+<br>
+<button (click)="onClick()">MOSTRAR TEXTO</button>
+<br>
+<h1>El contenido de la cajita es: {{textoEscrito}}</h1>

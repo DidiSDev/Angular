@@ -1,0 +1,34 @@
+<!-- <h1>Recorremos array creado con un *ngFor</h1>
+<ul>
+
+    
+
+    <li *ngFor="let i of array; let indice1=index"> 
+        <h2 style="color:red">PRIMER ARRAY: Posición: {{indice1+1}} de {{array.length}} contiene: {{i}}
+            <p style="color:blue">- ARRAY TEMPORAL: Posición {{(array.length-1-indice1)+1}} contiene: {{i}} </p>
+        </h2>
+        
+    </li>
+</ul> -->
+
+<!-- LO PRIMERO ES RECORRER EL ARRAY Y MOSTRARLO, PERO MIENTRAS SE HACE, EL TEMPORAL TAMBIÉN SE VA RELLENANDO Y MOSTRANDO POR DEBAJO
+  EL PROBLEMA DE LO ANTERIOR ES QUE NO ESTAMOS CREANDO REALMENTE NINGÚN ARRAY, SOLAMENTE ESTAMOS RECORRIENDO UNO Y MOSTRANDOLE TAMBIÉN A LA INVERSA
+  HAY QUE CREAR UN ARRAY Y PARA ELLO CREAMOS UNO TEMPORAL EN EL .TS -->
+
+  <!-- CORRECCIÓN DEBAJO: -->
+
+  <h2 style="color:brown">ARRAY PRIMIGENIO:
+    <ul>
+        <li *ngFor="let i of array; let indice=index">
+            <p style="color:blue">Posición: {{indice+1}} contiene el número: {{i}}</p>
+        </li>
+    </ul>
+  </h2>
+
+  <h3 style="color:brown">ARRAY TEMPORAL:
+    <ul>
+        <li *ngFor="let j of temporal; let indice2=index">
+            <p style="color:aqua">Posición: {{indice2+1}} contiene el número: {{j}}</p>
+        </li>
+    </ul>
+  </h3>

@@ -1,0 +1,18 @@
+
+    <h1>COMPARANDO UN OBJETO INSTANCIADO MANUALMENTE CON DATOS INTRODUCIDOS EN CONSTRUCTOR EN CONSTRUCTOR()</h1>
+
+    <h2 *ngIf="nombreIgualApellido1; else nombreDiferente">
+        <p>NOMBRE Y APELLIDOS: ¡IGUALES!</p>
+    </h2>
+    <!-- ng-template LO METEMOS SIRVE PARA INTRODUCIR EL TEXTO DE LA VARIABLE QUE ELIJO EN ELSE -->
+    <ng-template #nombreDiferente>
+        <p>NOMBRE Y APELLIDOS: ¡DIFERENTES!</p>
+    </ng-template>
+
+    <h2 *ngIf="apellido1IgualApellido2; else apellido1Diferente">
+        <p>APELLIDO 1 Y APELLIDO 2: ¡IGUALES!</p>
+    </h2>
+    <ng-template #apellido1Diferente>
+        <p>APELLIDO 1 Y APELLIDO 2: ¡DIFERENTES!</p>
+    </ng-template>
+

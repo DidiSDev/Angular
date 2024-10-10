@@ -1,0 +1,27 @@
+<h1>
+    <ul *ngIf = "marketing == true">
+        <li>Pertenece a marketing: {{empleado.nombre}}</li>
+    </ul>
+    <ul *ngIf = "marketing == false">
+        <li>NO Pertenece a marketing: {{empleado.nombre}}</li>
+    </ul>
+</h1>
+<br>
+<br>
+<!-- EL *ngLOQUESEA se puede poner en el padre de ul si lo tiene, 
+ tendrá preferencia cuanto más arriba esté -->
+<h1 *ngFor="let empleado of trabajadores">
+    <ul >
+        empleado
+        <ul>
+            {{empleado.nombre}} <br>
+            {{empleado.edad}} <br>
+            {{empleado.cargo}} <br>
+        </ul>
+    </ul>
+</h1>
+<br>
+<br>
+<input type="text"[(ngModel)]="valorSeleccionado"/>
+<br>
+<strong>{{valorSeleccionado}}</strong>

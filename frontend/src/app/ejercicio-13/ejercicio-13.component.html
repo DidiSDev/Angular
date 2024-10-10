@@ -1,0 +1,12 @@
+<h1>Introduce un color</h1>
+<input type="text" name="color" id="color" [(ngModel)]="color" >
+<button (click)="cambiarColor()">Cambiar color</button>
+<!-- PRACTICAR EN CASA HACERLO EN EL HTML, CON UN METODO POR DETRAS QUE EN EL ELSE DEL HTML
+ CAMBIE EL COLOR, QUE NO SEA UN BUTTON, QUE SE EJECUTE AL INPUT POR EJEMPLO. O AL NGMODEL
+ ME HA DICHO ÁNGEL QUE SE PUEDE HACER UN SÓLO "=" EN EL IF, QUE EN LUGAR DE COMPARAR, IGUALA UNA VARIABLE A OTRA
+  -->
+<br><br>
+
+<div style="width: 200px; height: 200px;" [style.background-color]="colorActual">
+    CUADRADO
+  </div>

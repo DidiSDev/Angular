@@ -1,0 +1,14 @@
+<h1>Introduzca un número entre 1 y 10 para ver si aciertas y eliges el que ya tengo preestablecido en la otra variable! Se mostrará error si no hay nada escrito, también</h1>
+<input type="text" name="variableVista" id="variableVista" [(ngModel)]="variableVista">
+<br>
+<h2>AQUÍ ABAJO LA COMPARACIÓN</h2>
+<ul>
+    <li *ngIf="variableVista==variablePreestablecida ;else daigualestenombre">
+        <h3>HAS ACERTADO!!, el número era el 7</h3>
+        
+    </li>
+    <!-- PUEDO LLAMAR AL ELSE COMO ME DE LA GANA -->
+    <ng-template #daigualestenombre>
+        <p>ERROR!!</p>
+    </ng-template>
+</ul>

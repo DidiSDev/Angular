@@ -1,0 +1,14 @@
+<h1>Indique el número que desea comparar con cada número de cada elemento del array</h1>
+<p>En el array solamente hay números del 1 al 10, en caso de introducir otros siempre saldrá "distinto"</p>
+<input type="text" name="numero" id="numero" [(ngModel)]="numeroIntroducido">
+<br>
+<h2>AQUÍ ABAJO SE COMPARARÁ EL NÚMERO INTRODUCIDO CON CADA ELEMENTO DEL ARRAY:</h2>
+    <ul>
+        <li *ngFor="let i of arrayNumeros;">
+            <p *ngIf="numeroIntroducido==i; else numeroDistinto">El número introducido: {{numeroIntroducido}} ES IGUAL a {{i}} </p>
+             <!-- ACUERDATE DEL NGTEMPLATE VA DENTRO DEL LI SI EL LI SE ABRE CON NGIF -->
+            <ng-template #numeroDistinto>
+                <p>El número introducido {{numeroIntroducido}} es DISTINTO de {{i}}</p>
+            </ng-template>
+        </li>       
+    </ul>

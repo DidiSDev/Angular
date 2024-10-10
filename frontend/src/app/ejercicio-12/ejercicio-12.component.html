@@ -1,0 +1,6 @@
+<h1>Introduce un color</h1>
+<input type="text" name="color" id="color" placeholder="INTRODUCE EL COLOR AQUI" [(ngModel)]="color">
+<button (click)="cambiarColor()">Cambiar color!!</button>
+
+<br><br><br>
+<div style="width: 100px; height: 100px;" [style.background-color]="nuevoColor">ESTO ES UN CUADRADO</div>

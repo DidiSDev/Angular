@@ -1,0 +1,10 @@
+<h1>Introduzca una palabra o un número</h1>
+<input type="text" name="caja" id="caja" [(ngModel)]="dato">
+<br>
+<button (click)="metodo()">Recoger dato!</button>
+
+<h1>MUESTRO EL ARRAY DE STRING EN COMPONENTE ISZQ</h1>
+<ul *ngFor="let i of palabra">
+    <li>{{i}}</li>
+</ul>
+<br>

@@ -1,0 +1,10 @@
+<h1>Indique la palabra par o impar para representar los pares o impares del array</h1>
+<input type="text" name="dato" id="dato" placeholder="Escribe par o impar" [(ngModel)]="dato">
+<button (click)="metodo()">Mostrar los numeros </button>
+
+<h2>ARRAY ORIGINAL: {{array}}</h2>
+<h2>ARRAY TEMPORAL: {{temporal}}</h2>
+<h2>{{error}}</h2>
+<br>
+<br>
+<button (click)="limpiar()">Limpiar campos</button>

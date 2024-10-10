@@ -1,0 +1,16 @@
+<h1>Indique cuántas veces desea que se muestre el array. Mínimo elija 1, por favor</h1>
+<input type="number" name="array" id="array" [(ngModel)]="cantidad" min="1">
+<button (click)="onClick()">GENERAR</button>
+
+<!-- GENERO UN ARRAY DE LA NADA QUE TENDRÁ TANTAS POSICIONES COMO UN ENTERO LE DIGA QUE TIENE -->
+<div *ngFor="let i of [].constructor(repeticiones); let aaaaaaaa=index">
+    <h2>MUESTRA: {{aaaaaaaa + 1}}:</h2>
+    <ul>
+        <!-- IMPORTANTE DIEGO ACOSTUMBRATE A USAR LI PARA RECORRER 
+         COSAS QUE QUEDA MÁS BONITO, SI NO HAY QUE CONTROLAR COMAS, ESPACIOS, ETC... -->
+
+         
+         <!-- FOR DENTRO DE FOR, RECORRERÁ TANTAS VECES CIUDAD DE CIUDADES COMO EL FOR ANTERIOR POSICIONES TENGA -->
+        <li *ngFor="let ciudad of ciudades">{{ ciudad }}</li>
+    </ul>
+</div>
